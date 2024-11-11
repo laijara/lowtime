@@ -4,7 +4,7 @@ import "./Application.css";
 function Application(){
     return(
         <div className="form-container tab-content active" id="formContainer">
-  <form id="ticketForm">
+  <form id="ticketForm" className="Form">
     <label htmlFor="name">Ваше имя:</label>
     <input type="text" id="name" required="" />
     <label htmlFor="issue">Проблема:</label>
@@ -26,10 +26,6 @@ function Application(){
     <input type="time" id="time" required="" />
     <input type="submit" defaultValue="Создать заявку" />
   </form>
-  <div className = "photocontent_img" id="photocontent">
-    <img src="/Cat.jpg"></img>
-    <alt>Котька</alt>
-  </div>
 </div>
 
     );

@@ -8,7 +8,7 @@ function Header(){
   <h1>Help Desk Система</h1>
   <div className="current-time" id="currentDateTime" />
   <div className="nav">
-    <div className="tab active" data-tab="formContainer">
+    <div className="tabActive" data-tab="formContainer">
       <div>
         <Link to="/"><button>Все заявки</button></Link>
       </div>

@@ -1,3 +1,9 @@
 .container{
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+}
+.tabActive{
+    display: flex;
+    flex-direction: row;
 }
