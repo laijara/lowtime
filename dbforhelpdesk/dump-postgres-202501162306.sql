@@ -5,7 +5,7 @@
 -- Dumped from database version 16.5
 -- Dumped by pg_dump version 16.5
 
--- Started on 2025-01-16 19:50:26
+-- Started on 2025-01-16 23:06:27
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -79,7 +79,9 @@ CREATE TABLE public.applications (
     application_applicant integer,
     application_applicant_department integer,
     application_executor integer,
-    application_executor_department integer
+    application_executor_department integer,
+    applications_open_time time without time zone,
+    applications_close_time time without time zone
 );
 
 
@@ -169,7 +171,7 @@ COPY public.applicant (applicant_id, applicant_num, applicant_name, applicant_de
 -- Data for Name: applications; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.applications (applications_id, application_reason, application_description, application_applicant, application_applicant_department, application_executor, application_executor_department) FROM stdin;
+COPY public.applications (applications_id, application_reason, application_description, application_applicant, application_applicant_department, application_executor, application_executor_department, applications_open_time, applications_close_time) FROM stdin;
 \.
 
 
@@ -346,7 +348,7 @@ ALTER TABLE ONLY public.executor
     ADD CONSTRAINT executor_department_fk FOREIGN KEY (executor_department) REFERENCES public.department(department_num);
 
 
--- Completed on 2025-01-16 19:50:26
+-- Completed on 2025-01-16 23:06:27
 
 --
 -- PostgreSQL database dump complete
